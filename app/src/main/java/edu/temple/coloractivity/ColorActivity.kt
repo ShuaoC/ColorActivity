@@ -17,11 +17,12 @@ class ColorActivity : AppCompatActivity() {
         val spinner = findViewById<Spinner>(R.id.spinner)
         val layout = findViewById<androidx.constraintlayout.widget.ConstraintLayout>(R.id.layout)
 
-        val colors = arrayOf("White","Darkgrey","Blue","Green","Cyan","Magenta","Yellow","silver","Teal","Lime","Maroon")
+        val colors = arrayOf("Red","Darkgrey","Blue","Green","Cyan","Magenta","Yellow","silver","Teal","Lime","Maroon")
 
         val adapter = ColorAdapter(this, colors)
 
         spinner.adapter = adapter
+        spinner.setSelection(0, false);
         val eventListener = object: AdapterView.OnItemSelectedListener{
             override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
                 layout.setBackgroundColor(Color.parseColor(adapter.getItem(spinner.selectedItemPosition)))
