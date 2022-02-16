@@ -17,7 +17,7 @@ class ColorActivity : AppCompatActivity() {
         val spinner = findViewById<Spinner>(R.id.spinner)
         val layout = findViewById<androidx.constraintlayout.widget.ConstraintLayout>(R.id.layout)
 
-        val colors = arrayOf("Gray", "Magenta", "Yellow", "Red", "Purple")
+        val colors = arrayOf("White","Darkgrey","Blue","Green","Cyan","Magenta","Yellow","silver","Teal","Lime","Maroon")
 
         val adapter = ColorAdapter(this, colors)
 
