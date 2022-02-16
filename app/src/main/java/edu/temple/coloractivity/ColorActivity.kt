@@ -27,23 +27,6 @@ class ColorActivity : AppCompatActivity() {
         spinner.adapter = adapter
 
 
-        val eventListener = object: AdapterView.OnItemSelectedListener {
-            override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
-
-                val messageString = p0!!.getItemAtPosition(p2).toString()
-
-                Toast
-                    .makeText(this@ColorActivity, messageString, Toast.LENGTH_SHORT)
-                    .show()
-            }
-
-            override fun onNothingSelected(p0: AdapterView<*>?) {
-            }
-
-        }
-
-        spinner.onItemSelectedListener = eventListener
-
 
     }
     }

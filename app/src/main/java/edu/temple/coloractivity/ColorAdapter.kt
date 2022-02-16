@@ -25,7 +25,18 @@ class ColorAdapter(_context: Context, _colors: Array<String>) : BaseAdapter() {
     }
 
     override fun getView(position: Int, p1: View?, p2: ViewGroup?): View {
+        val textView: TextView
 
+        if (p1 == null) {
+            textView = TextView(context)
+            textView.textSize = 24f
+            textView.setPadding(10, 10, 0, 10)
+        } else
+            textView = p1 as TextView
+
+        textView.text = colors[position]
+        textView.setBackgroundColor(Color.parseColor("white"))
+        return textView
     }
 
     override fun getDropDownView(position: Int, convertView: View?, parent: ViewGroup?): View {
