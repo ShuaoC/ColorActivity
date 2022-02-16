@@ -34,7 +34,11 @@ class ColorAdapter(_context: Context, _colors: Array<String>) : BaseAdapter() {
         } else
             textView = p1 as TextView
 
-        textView.text = colors[position]
+        if(position == 0){
+            textView.text = "Please choose a color"
+        }else{
+            textView.text = colors[position]
+        }
         textView.setBackgroundColor(Color.parseColor("white"))
         return textView
     }
